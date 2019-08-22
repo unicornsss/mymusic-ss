@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.SongListMapper">
+    <resultMap id="listResult" type="SongList">
+        <id property="id" column="id"/>
+        <result property="listName" column="list_name"/>
+        <result property="likeNum" column="like_num"/>
+        <result property="listLabel" column="list_label"/>
+        <result property="listPicture" column="list_picture"/>
+        <result property="listSummary" column="list_summary"/>
+        <result property="playNum" column="play_num"/>
+        <result property="userId" column="user_id"/>
+        <result property="listFlag" column="list_flag"/>
+
+        <association property="user" javaType="User">
+            <id property="id" column="u_id"/>
+            <result property="accountNumber" column="account_number"/>
+            <result property="createTime" column="create_time"/>
+            <result property="fans" column="fans"/>
+            <result property="likeList" column="like_list"/>
+            <result property="likeSongs" column="like_songs"/>
+            <result property="likeSpecial" column="like_special"/>
+            <result property="noticeSinger" column="notice_singer"/>
+            <result property="noticeUser" column="notice_user"/>
+            <result property="username" column="username"/>
+            <result property="userPic" column="user_pic"/>
+        </association>
+
+    </resultMap>
+    <insert id="insertSongList" parameterType="SongList">
+        insert into song_list(user_id, list_name,list_label, play_num,like_num,list_picture, list_summary)
+        values (#{userId}, #{listName}, #{listLabel},#{playNum},#{likeNum}, #{listPicture}, #{listSummary});
+    </insert>
+    <select id="selectByUser" resultMap="listResult" parameterType="integer">
+        select song_list.id ,user_id, list_name,list_label, play_num,like_num,list_picture, list_summary,list_flag,user.id u_id,username
+        from song_list,user
+        where user_id = user.id and list_flag = 0 and user_id = #{id};
+    </select>
+    <update id="updateLikeDel">
+        update song_list set list_flag = 1 where id = #{id};
+    </update>
+    <update id="updateLikeSong" parameterType="SongList">
+        update song_list set like_num = #{likeNum} where id = #{id};
+    </update>
+
+    <update id="updateListType" parameterType="SongList">
+      update song_list set list_label = #{listLabel} where id = #{id};
+    </update>
+
+    <update id="updateListSum" parameterType="SongList">
+        update song_list set list_summary = #{listSummary} where id = #{id};
+    </update>
+
+    <select id="findByNameId" resultMap="listResult" parameterType="SongList">
+        select id ,user_id, list_name,list_label, play_num,like_num,list_picture, list_summary,list_flag
+        from song_list
+        where list_name = #{listName} and user_id = #{userId};
+    </select>
+    <select id="selectListByListId" resultMap="listResult" parameterType="integer">
+        select id ,user_id, list_name,list_label, play_num,like_num,list_picture, list_summary,list_flag
+        from song_list
+        where id = #{id};
+    </select>
+
+
+</mapper>

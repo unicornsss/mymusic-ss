@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.AdministratorMapper">
+    <resultMap id="administratorResult" type="com.music.bean.Administrator">
+        <id property="id" column="id"/>
+        <result property="administratorNumber" column="administrator_number"/>
+        <result property="password" column="password"/>
+    </resultMap>
+    
+    <insert id="insertAdministrator" parameterType="com.music.bean.Administrator">
+        insert into administrator (administrator_number,password) values ( #{administratorNumber} , #{password});
+    </insert>
+    <select id="selectAdmin" resultMap="administratorResult" parameterType="com.music.bean.Administrator">
+        select id,administrator_number,password from administrator where administrator_number = #{administratorNumber}and password = #{password};
+    </select>
+</mapper>

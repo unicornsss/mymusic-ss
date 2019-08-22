@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../html/ttt6.css"/>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+
+      $("#commit-btn").click(function(){
+        if($("#comment-text").val()!= null){
+          alert($("#comment-text").val());
+        }
+      });
+    })
+  </script>
+</head>
+<body>
+<div id="show-top">
+  <ul id="top-ul">
+    <li id="top-ul1"><img src="../other/logo.png" alt=""/></li>
+    <li class="topa" id="top-color"><a href=""><span>音乐馆</span></a></li>
+    <li class="topa"><a href="/music/userPage"><span>我的音乐</span></a></li>
+    <li id="top-input"><div><input type="text"/></div></li>
+    <!--可以退出-->
+    <li id="top-5"><a href="">${userShow.username}</a></li>
+    <li id="top-6"><a href="">退出</a></li>
+  </ul>
+</div>
+<div id="page-menu">
+  <ul>
+    <li><span><a href="">首页</a></span></li>
+    <li><span><a href="">歌手</a></span></li>
+    <li><span><a href="">专辑</a></span></li>
+    <li><span><a href="">歌单</a></span></li>
+    <li><span><a href="">排行榜</a></span></li></ul>
+</div>
+<div id="page-main">
+  <div class="show-sin">
+    <div id="every-singer-show">
+      <img src="../files/1540976695822&&tablo.jpg" alt=""/>
+      <div id="song-details">
+        <span id="singer-de-name">$111</span><br/>
+        <span class="song-de">专辑：$11}</span>
+        <span class="song-de">语种：$1</span>
+        <span class="song-de">流派：${11</span>
+        <span class="song-de">唱片公司：$1</span>
+        <span class="song-de">发行时间：$111</span>
+        <p id="singer-de-mes">专辑简介：${special.specialSummary}</p><br/>
+          <!--<button id="singer-notice-btt" property="${special.id}">已收藏</button>-->
+        <button id="singer-play-btt" property="${special.id}">播放</button>
+        <button id="singer-notice-btt" property="${special.id}">收藏</button>
+
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div id="show-song">
+    <div id="show-lrc">
+      <span>歌词</span>
+      <pre>
+         $(".every-song").mouseleave(function(){
+                $(".btn-play").css('display','none');
+                btnFlag = 0;
+            });
+            $(".topa a").click(function(){
+                $(this).css("background",'#35ffaa');
+            });
+            var noticeFlag = 0;
+            $("#singer-notice-btt").click(function(){
+//                if(noticeFlag == 0){
+//                没有关注
+                if($(this).html() =="收藏" ){
+                    $(this).html("已收藏");
+      </pre>
+    </div>
+    <div id="comment">
+      <span id="comment-title">评论</span>
+      <span>共10条评论</span>
+      <br/>
+      <table id="commit-comment">
+        <textarea name="" id="comment-text"></textarea>
+        <br/>
+        <button id="commit-btn">提交</button>
+      </table>
+
+      <div class="every-comment">
+        <div><img src="../files/1540976695822&&tablo.jpg" alt="" /></div>
+        <span class="comment-name">DIIVVV</span> <span>2017年4月30日 07:07</span>
+        <!--<p>高考前每天听这首歌曲 给了我很多力量 现在已经工作两年 身处西非尼日利亚 今天听到了一个黑人在哼唱这首歌 瞬间回到了那一年 那一个盛夏 </p>-->
+        <p>天边的夕阳在梦的边缘,正一点一点往下坠.那淡淡的娇红里隐约着浅浅的艳紫,渲染出一种凄美的韵致,顾盼着满天的云霞,起伏的山峦.跌进了一个缤纷的梦境里.
+          残阳是一支饱满的水彩笔,在云的面颊深情挥洒.云,燃烧起来,绚烂起来.浅红套着嫣红,深红印着紫红.
+          沉默的山被点燃了,轮廓渐渐清晰起来.绵延的峰顶燃烧成橘红色,与天上的云霞相互媲美.山的中间紫红里透出淡淡的青蓝,显得十分厚重.山脚下那如梦如幻的淡粉色的云雾,模糊了一带如梦的树林,飘渺了一片如诗的村舍.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

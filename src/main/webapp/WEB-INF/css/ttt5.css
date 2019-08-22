@@ -1,0 +1,199 @@
+/*html,body{height: 100%;margin: 0;padding: 0;}*/
+/*ul{list-style: none;}*/
+/*a{*/
+    /*text-decoration:none}*/
+/*#show-top{width: 100%}*/
+/*#top-ul{*/
+    /*width:100%;*/
+    /*height:100px;*/
+    /*list-style: none;*/
+    /*margin:0;*/
+    /*padding:0;*/
+    /*text-align: center;*/
+    /*line-height: 100px;*/
+/*}*/
+/*#top-ul li{*/
+    /*height: 100px;*/
+    /*background: #e8e8e8;*/
+    /*float: left;*//*该处换为display:inline-block;同样效果*/
+/*}*/
+/*#top-ul1 { width: 25%;text-align: center;line-height: 130px; }*/
+/*#top-color a{background: #2cff9d;}*/
+/*#top-input {width: 23% ;text-align:center;line-height:100px;}*/
+/*.topa a{  width:200px;height: 100px;font-size: 18px;line-height:100px;*/
+    /*display: inline-block;text-align:center;}*/
+/*#top-5{ text-align:center;line-height:100px;width: 160px;}*/
+/*#top-6{width: 10%;}*/
+/*#top-6 a{width: 100px;background: #808080;height: 100px;line-height:100px; display: inline-block;text-align:center;}*/
+/*#top-img{text-align:center;line-height:100px;width: 80px;height:80px;background: #000000}*/
+/*.show-img {background: url("../other/6c3e6b13gy1fv2jtx305rj20hs0budg0.jpg");width: 100%;height: 300px;padding-top: 10px;text-align: center;color: #ffffff}*/
+/*#show-img-self {width: 80px;height: 80px;}*/
+/*.show-fan li{float: left;}*/
+/*.show-fan {margin-left: 44%;}*/
+/*.main{margin-top: -50px;}*/
+/*.menu { padding-bottom: 30px;}*/
+/*.menu a{color: #ffffff}*/
+/*.menu li{float: left;width: 130px;}*/
+/*.like {}*/
+/*.like li{float: left;width: 100px;}*/
+/*.like a{color: #000000}*/
+/*.main {margin-left: 50px;}*/
+/*#song-menu li{float: left;background: darkgray;height: 80px;line-height: 80px;}*/
+/*#header-song {width:600px; }*/
+/*#header-singer{width: 200px;}*/
+/*#header-spe{width: 200px;}*/
+/*#header-time{width: 100px;}*/
+/*.every-song {height: 60px;line-height: 60px;margin-bottom: 5px;}*/
+/*.every-song a {color: #000000}*/
+/*.list-song{float: left}*/
+/*.every-song span{line-height: 70px;}*/
+/*.btn-play {float: right;}*/
+/*.btn-play span{display:inline-block;width: 50px;height: 40px;line-height: 40px;background: #808080;margin-right: 5px;}*/
+/*.song-name{ float: left;}*/
+/*.every-header{float: left;width: 600px;background: #c6c6c6;}*/
+/*.every-singer, .every-spe{float: left;background: #c6c6c6;line-height: 60px;display:inline-block;height: 60px;margin-left: 5px;width: 195px}*/
+/*.follow-singer img{width: 150px; height: 150px;border-radius:50%;}*/
+/*.follow-singer{float: left;width: 170px;text-align:center;;background: #c6c6c6;margin:10px 10px 0px 0px;  }*/
+/*#show-song{margin-left: 10px;}*/
+/*.follow-singer span{line-height: 30px;}*/
+/*#page-menu{text-align: center;line-height: 60px;width: 100%;height: 80px;position: relative;}*/
+/*#page-menu ul{margin:0 auto;width: 520px;}*/
+/*#page-menu li{float: left;background: #f9fffb;border: 1px dashed #b8b6be}*/
+/*#page-main{background: #c6c6c6;overflow:auto;padding-left: 35px;}*/
+/*.new-spe{height: 380px}*/
+/*#page-menu span{width: 100px;height: 60px;display: inline-block}*/
+/*.page-spe-name {width:180px;height: 60px;background: #c6c6c6;font-size: 26px;line-height: 60px;letter-spacing:8px;*/
+    /*margin-left: 595px;display: inline-block;}*/
+/*.page-every-spe img{width: 200px;}*/
+/*.page-every-spe span{width: 180px;height: 30px;display: inline-block;}*/
+/*.page-every-spe li {float: left;width: 220px;height: 250px;margin-left: 10px;margin-bottom: 10px; }*/
+/*.new-song{height: 800px;}*/
+
+html,body{height: 100%;margin: 0;padding: 0;}
+ul{list-style: none;}
+a{  text-decoration:none }
+#show-top{width: 100%}
+#top-ul{ width:100%;  height:100px;  list-style: none;  margin:0;  padding:0;  text-align: center;  line-height: 100px;  }
+#top-ul li{
+    height: 100px;
+    background: #e8e8e8;
+    float: left;/*该处换为display:inline-block;同样效果*/
+}
+#top-ul1 { width: 25%;text-align: center;line-height: 130px; }
+#top-color a{background: #2cff9d;}
+#top-input {width: 23% ;text-align:center;line-height:100px;height: 100px;}
+.topa a{  width:200px;height: 100px;font-size: 18px;line-height:100px;display: inline-block;text-align:center;}
+#top-5{ text-align:center;line-height:100px;width: 160px;}
+#top-6{width: 10%;}
+#top-6 a{width: 100px;background: #808080;height: 100px;line-height:100px; display: inline-block;text-align:center;}
+#top-img{text-align:center;line-height:100px;width: 80px;height:80px;background: #000000}
+.show-img {background: url("../other/6c3e6b13gy1fv2jtx305rj20hs0budg0.jpg");width: 100%;height: 300px;padding-top: 10px;text-align: center;color: #ffffff}
+#show-img-self {width: 80px;height: 80px;}
+.show-fan li{float: left;}
+.show-fan {margin-left: 44%;}
+.main{margin-top: -50px;}
+.menu { padding-bottom: 30px;}
+.menu a{color: #ffffff}
+.menu li{float: left;width: 130px;}
+.like {}
+.like li{float: left;width: 100px;}
+.like a{color: #000000}
+.main {margin-left: 50px;}
+#song-menu li{float: left;background: darkgray;height: 60px;line-height: 60px;}
+#header-song {width:600px; }
+#header-singer{width: 200px;}
+#header-spe{width: 200px;}
+#header-time{width: 100px;}
+.every-song {height: 60px;line-height: 60px;margin-bottom: 5px;}
+.every-song a {color: #000000}
+.list-song{float: left}
+/*.every-song span{line-height: 70px;}*/
+.btn-play {float: right;}
+.btn-play button{width: 50px;line-height: 25px;}
+.btn-play span{display:inline-block;width: 50px;height: 40px;line-height: 40px;background: #808080;margin-right: 5px;}
+.song-name{ float: left;}
+.every-header{float: left;width: 600px;background: #ffffff;}
+.every-singer{float: left;background: #d1d1d1;line-height: 60px;display:inline-block;height: 60px;margin-left: 5px;width: 195px}
+.every-spe {float: left;background: #d1d1d1;line-height: 60px;display:inline-block;height: 60px;margin-left: 5px;width: 350px;
+    overflow: hidden;text-overflow: ellipsis;white-space:nowrap;
+}
+.follow-singer img{width: 150px; height: 150px;border-radius:50%;}
+.follow-singer{float: left;width: 170px;text-align:center;;background: #d1d1d1;margin:10px 10px 50px 0;  }
+.follow-singer span{line-height: 30px;}
+/*.page-show-singer img{width: 150px; height: 150px;border-radius:50%;}*/
+/*.page-show-singer{float: left;width: 170px;text-align:center;;background: #d1d1d1;margin:10px 10px 30px 0px;  }*/
+/*.page-show-singer span{line-height: 30px;}*/
+#show-song{margin-left: 10px;}
+#page-menu{text-align: center;line-height: 60px;width: 100%;height: 80px;position: relative;}
+#page-menu ul{margin:0 auto;width: 520px;}
+#page-menu li{float: left;background: #f9fffb;border: 1px dashed #b8b6be}
+#page-main{background: #ffffff;padding-left: 35px; margin-bottom: 50px;}
+/*overflow:auto;*/
+.new-spe{height: 380px}
+#page-menu span{width: 100px;height: 60px;display: inline-block}
+.page-spe-name {width:145px;height: 60px;background: #d1d1d1;font-size: 26px;line-height: 60px;letter-spacing:8px;
+    margin-left: 595px;display: inline-block;}
+.page-every-spe img{width: 200px;height: 200px;}
+.page-every-spe span{width: 180px;height: 30px;display: inline-block;}
+.page-every-spe li {float: left;width: 220px;height: 250px;margin-left: 10px;margin-bottom: 10px; }
+/*.new-song{height: 400px;}*/
+/*.new-song{margin-bottom:50px;}*/
+#page-menu-btn {margin-top: 60px;text-align:center}
+/*#page-menu-btn-spe {margin-top: 300px;text-align:center}*/
+#page-menu-btn table{margin:auto;}
+.notice-singer-btn { display:inline-block;background: #7c7c80;width: 50px; height: 30px;line-height: 30px;}
+#every-singer-show img{float:left;width: 200px; height: 200px;border-radius:50%;}
+#every-singer-show {margin:30px 50px 0 50px;padding-bottom: 200px;}
+#singer-details{float: left;padding-left: 40px;}
+#singer-de-name{font-size: 40px;}
+#singer-de-mes {width: 800px;
+    /*text-align:justify;*/
+    /*text-overflow:ellipsis;overflow:hidden;white-space:nowrap;*/
+}
+#singer-des li{float: left;padding-right: 20px;font-size:20px;width: 100px; }
+#singer-des{margin: 0;padding: 0;}
+#singer-song-menu{ float: left}
+.singer-header-spe {width: 300px;}
+/*.show-sin{margin-bottom: 20px;padding-bottom: 40px;background: blue}*/
+/*.btn-play {display: none}*/
+.btn-play {display: none}
+.btn-list {width: 65px;line-height: 25px;height: 30px;}
+.notice-singer-btn { display:inline-block;background: #7c7c80;width: 50px; height: 30px;line-height: 30px;}
+#select-btn2 {background: #808080}
+#addlist-menu {margin-top:-10px; margin-right:80px;}
+#add-list {width: 80px;height: 40px; font-size: 16px;margin-left: 30px;}
+
+.mylist-name {width: 455px ;}
+.mylist-number {width: 455px;}
+.mylist-play-num{width: 250px;}
+#show-mylist li{float: left;height:45px;line-height: 45px;margin-bottom: 15px;}
+
+#show-mylist ul{background: burlywood;list-style: none;}
+#show-mylist span{display: inline-block;background: #d1d1d1 }
+.mylist-myname {display: inline-block;width: 450px; }
+.mylist-allnum {width: 450px;}
+.mylist-allplay {width: 250px; line-height: 40px;}
+#add-mylist {margin-left: 36px;}
+#add-mylist input {width: 220px;height: 30px;}
+#my-menu-label {color: #62cd8e}
+/*.btn-list-del{width: 55px;float: right;height: 30px; display: none  }*/
+/*.btn-list-del  button{width:50px;height: 30px; }*/
+.do-list-del { float: right;display: none;width: 50px;height: 40px;}
+
+.song-de {display: inline-block;width: 300px;}
+#song-details {width: 650px;float: left;padding-left: 40px;margin-bottom: 20px;}
+#song-details button {width: 70px;height: 35px;font-size: 16px;}
+#show-lrc {background: #d1d1d1;margin-left: 30px;}
+#show-lrc span{font-size: 18px;font-weight: bold;}
+#comment{padding-left: 40px;}
+#comment-title {font-size: 20px;}
+.comment-title {font-size: 20px;}
+#comment-text {
+    /*width: 500px;height: 200px;*/
+    width:500px; height:50px;}
+.every-comment {width: 905px;}
+.every-comment div{width: 100px;height: 100px;float: left;background: #ffffff; }
+.every-comment img {width: 80px;height: 80px;}
+.every-comment p{width: 800px;list-style:none;margin-top: 4px;float: right;}
+.comment-name {font-size: 18px;}
+#commit-comment {margin-bottom: 10px;}

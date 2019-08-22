@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.SingerTypeMapper">
+    <resultMap id="singTypeResult" type="SingerType">
+        <id property="idSingerType" column="id_singer_type"/>
+        <result property="singerType" column="singer_type"/>
+    </resultMap>
+    <select id="selectSingerType" resultType="com.music.bean.SingerType">
+        select id_singer_type,singer_type from singer_type;
+    </select>
+</mapper>

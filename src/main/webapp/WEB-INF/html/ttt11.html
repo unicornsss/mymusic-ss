@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="ttt6.css"/>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+
+</head>
+<body>
+<div id="show-top">
+  <ul id="top-ul">
+    <li id="top-ul1"><img src="../other/logo.png" alt=""/></li>
+    <li class="topa"><a href=""><span>音乐馆</span></a></li>
+    <li class="topa"  id="top-color"><a href=""><span>我的音乐</span></a></li>
+    <li id="top-input"><div><input type="text"/></div></li>
+    <!--可以退出-->
+    <li id="top-5"><a href="">${userShow.username}</a></li>
+    <li id="top-6"><a href="">退出</a></li>
+
+  </ul>
+</div>
+<div class="show-img">
+  <div >
+    <img src="../files/1540976695822&&tablo.jpg" alt="" id="show-img-self"/>
+  </div>
+  <h1>${user.username}</h1>
+  <ul class="show-fan">
+    <li>关注${user.noticeSinger}|</li>
+    <li>|粉丝${user.fans}</li>
+  </ul>
+</div>
+<div class="main">
+  <div id="show-menu">
+    <ul class="menu">
+      <li><a href="">我喜欢</a></li>
+      <li><a href="">我创建的歌单</a></li>
+      <li><a href="/music/showNotice">关注</a></li>
+      <li><a href="">粉丝</a></li>
+    </ul>
+    <ul class="like">
+      <li><a href="">歌曲</a></li>
+      <li><a href="">歌单</a></li>
+      <%--<li><a href="">专辑</a></li>--%>
+    </ul>
+  </div><br/>
+  <div id="addlist-menu">
+    <a href=""><button id="add-list"> 创建歌单</button></a>
+    <div id="add-mylist">
+      <label> 请输入歌单名
+        <input type="text"/>
+      </label>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

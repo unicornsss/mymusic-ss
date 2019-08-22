@@ -1,0 +1,71 @@
+/*
+* @Author: anchen
+* @Date:   2016-04-26 23:13:06
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-04-26 23:13:10
+*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+.cl{
+    clear: both;
+}
+.red_border{
+    border-color: #FF0000;
+}
+.orange_border{
+    border-color: #FF7800;
+}
+.green_border{
+    border-color: #0DAD51;
+}
+.pink_border{
+    border-color: #F3508D;
+}
+.mg_r_b{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.mg_b{
+    margin-bottom: 10px;
+}
+.mg_r{
+    margin-right: 10px;
+}
+.mv_mg_r{
+    margin-right: 20px;
+}
+.mv_mg_b{
+    margin-bottom: 25px;
+}
+.choice_mg_r{
+    margin-right: 12px;
+}
+.choice_mg_b{
+    margin-bottom: 35px;
+}
+.rank_index_mg_b{
+    margin-bottom: 12px;
+}
+.rank_index_mg_r{
+    margin-right: 20px;
+}
+.singer_list_mg_r{
+    margin-right: 34px;
+}
+.singer_list_mg_b{
+    margin-bottom: 20px;
+}
+.singer_area_mg_r{
+    margin-right: 22px;
+}
+.singer_area_mg_b{
+    margin-bottom: 1px;
+}

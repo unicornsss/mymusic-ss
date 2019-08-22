@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="ttt6.css"/>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <!--<script>-->
+    <!--$(function(){-->
+      <!--var btnFlag = 0;-->
+      <!--$(".every-song").mouseenter(function(){-->
+        <!--if(btnFlag ==0){-->
+          <!--showbtn();-->
+        <!--}-->
+      <!--});-->
+      <!--$(".every-song").mouseleave(function(){-->
+        <!--$(".song-name").next().remove();-->
+        <!--btnFlag = 0;-->
+      <!--});-->
+      <!--function showbtn(){-->
+        <!--$(".every-header").append('<div class="btn-play"><a href=""><span>播放</span></a><a href=""><span>+</span></a></div>');-->
+        <!--btnFlag = 1;-->
+      <!--}-->
+    <!--});-->
+  <!--</script>-->
+  <script>
+    $(function(){
+      var btnFlag = 0;
+      $(".every-song").mouseenter(function(){
+        if(btnFlag ==0){
+          $(".btn-play").css('display','block');
+//          showbtn();
+//          $(".btn-play").show("fast",callback);
+          btnFlag = 1;
+        }
+      });
+      $(".every-song").mouseleave(function(){
+        $(".btn-play").css('display','none');
+//        $(".song-name").next().remove();
+//        $(".btn-play").hide("fast");
+        btnFlag = 0;
+      });
+      $(".topa a").click(function(){
+        $(this).css("background",'#35ffaa');
+      });
+
+    });
+  </script>
+</head>
+<body>
+<div id="show-top">
+  <ul id="top-ul">
+    <li id="top-ul1"><img src="../other/logo.png" alt=""/></li>
+    <li class="topa" id="top-color"><a href=""><span>音乐馆</span></a></li>
+    <li class="topa"><a href=""><span>我的音乐</span></a></li>
+    <li id="top-input"><div><input type="text"/></div></li>
+    <!--可以退出-->
+    <li id="top-5"><a href="">xxxxxx</a></li>
+    <li id="top-6"><a href="">退出</a></li>
+  </ul>
+</div>
+<div id="page-menu">
+  <ul>
+    <li><span><a href="">首页</a></span></li>
+    <li><span><a href="">歌手</a></span></li>
+    <li><span><a href="">专辑</a></span></li>
+    <li><span><a href="">歌单</a></span></li>
+    <li><span><a href="">排行榜</a></span></li></ul>
+</div>
+<div id="page-main">
+  <div class="show-sin">
+    <div id="every-singer-show"><img src="../files/1540976864022&&tablo.jpg" alt=""/>
+      <div id="singer-details">
+        <span id="singer-de-name">table</span><br/>
+        <p id="singer-de-mes">歌手；制作人；词曲家  生日：1980年7月22日  个人信息：172cm/巨蟹座/A型歌手；制作人；词曲家  生日：1980年7月22日  个人信息：172cm/巨蟹座/A型歌手；制作人；词曲家  生日：1980年7月22日  个人信息：172cm/巨蟹座/A型</p><br/>
+        <ul id="singer-des">
+          <li>单曲222</li>
+          <li>|专辑222</li>
+          <li>|粉丝</li></ul>
+        <button>关注</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="show-song">
+    <ul id="song-menu">
+      <li id="header-song">歌曲</li>
+      <li class="singer-header-spe">专辑</li>
+      <li id="header-time">时长</li>
+    </ul>
+    <ul class="list-song">
+      <li>
+        <div class="every-song">
+          <div class="every-header">
+            <a href="" class="song-name"><span>sing for you</span></a>
+            <div class="btn-play"><a href=""><button>播放</button></a>
+              <select class="btn-list" ><option value="1" >添加到</option><option value="222">222</option></select></div>
+          </div>
+          <span class="singer-header-spe"><a href="">专辑</a></span>
+        </div></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

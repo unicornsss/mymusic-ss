@@ -1,0 +1,28 @@
+html,body{height: 100%;margin: 0;padding: 0;}
+a{text-decoration:none;color: #040404}
+#all{width: 100%;}
+#manager-top {background: #040404; width: 100%; height:50px;font-size: 20px;position:relative}
+#manager-name{ text-align:center;position:absolute;color: #ffffff;left: 100px;top: 10px;}
+#manager-out{ right: 200px;position:absolute;top: 10px;}
+#manager-out a{color: #ffffff ;}
+#list-menu{list-style:none;display:block }
+#list-menu div{width:120px; height:60px;background: #bebdb9;text-align: center;}
+#list-menu a{line-height:60px }
+#show-list{background: #ffffff;width: 15%;position:absolute;float: left;}
+#show-message{background: #c6c6c6;width:82.3%;float: right; padding-left: 30px; height:100%;}
+#add-singer{background: #838189;width: 80px; height: 30px;margin-top: 20px;margin-left: 2px;margin-bottom: 10px; text-align: center;}
+.show-every-singer{display:inline-block;width: 160px;height: 230px;background: ghostwhite;padding-left: 10px;padding-top: 10px;padding-right: 10px;margin-left: 15px;margin-bottom: 20px;}
+.show-pic {width: 160px;height: 160px; }
+#add-singer-mes td{height:40px;  }
+/*border:1px solid #9f9ea3;*/
+.show-name { width: 100px;background: #818082; }
+.show-details { border:1px solid #2b9bff; }
+#singer-message {height: 100px; width: 300px;}
+#showpic{ width: 150px; height:150px;}
+.add-songs{ border-bottom:1px dashed #000; width: 400px;height: 110px; }
+.add-songs li{list-style: none; height: 40px;}
+.add-songs-img {margin-right: 50px;float:right; display:inline-block; margin-top: -105px;}
+/*.add-songs-but {margin-right: 20px;float:right; display:inline-block; margin-top: -105px;}*/
+/*position:absolute; position:relative;*/
+.add-songs-img img{width: 90px; height: 90px;}
+.add-songs-img p{height: 50px;}

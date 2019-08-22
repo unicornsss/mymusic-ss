@@ -1,0 +1,21 @@
+*{margin: 0; padding: 0;}
+html,body{height: 100%;margin: 0;padding: 0;}
+body { overflow: hidden; width: 100%; }
+ul, li { list-style-type: none; }
+ul { float: left}
+img { vertical-align: middle}
+#manage {width: 300px; height: 800px; }
+#singer_manage { margin-top: 100px; width: 300px; height: 120px; background: lawngreen; color: #fff; line-height: 120px; text-align: center; font-size: 30px; }
+#song_manage { margin-top: 100px; width: 300px; height: 120px; background: cornflowerblue; color: #fff; line-height: 120px; text-align: center; font-size: 30px; }
+#special_manage {margin-top: 100px; width: 300px; height: 120px; background: #faf; color: #fff; line-height: 120px; text-align: center; font-size: 30px;}
+#other_manage { margin-top: 100px; width: 300px; height: 120px; background: orange; color: #fff; line-height: 120px; text-align: center; font-size: 30px;}
+#singer_manage:hover, #song_manage:hover, #special_manage:hover, #other_manage:hover { cursor: hand ;}
+.now span { font-size: 30px; color: #fff; }
+
+#manage_show { overflow:hidden; float: left; width: auto; height: auto; }
+#singer_manage_content { float: left; }
+#add_singer { width: 100px; height: 50px; }
+#show_singer { width: 100px; height: 50px; }
+.singer_picture { width:150px;  height:80px;}
+#all_singer tr td { width: 150px; height: 80px; text-align: center; }
+

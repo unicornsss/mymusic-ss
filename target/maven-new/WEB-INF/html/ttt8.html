@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="ttt5.css"/>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+      var btnFlag = 0;
+      $(".every-song").mouseenter(function(){
+        if(btnFlag ==0){
+          showbtn();
+        }
+      });
+      $(".every-song").mouseleave(function(){
+        $(".song-name").next().remove();
+        btnFlag = 0;
+      });
+      $(".topa a").click(function(){
+        $(this).css("background",'#35ffaa');
+      });
+      function showbtn(){
+        $(".every-header").append('<div class="btn-play"><a href=""><span>播放</span></a><a href=""><span>+</span></a></div>');
+        btnFlag = 1;
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="show-top">
+  <ul id="top-ul">
+    <li id="top-ul1"><img src="../other/logo.png" alt=""/></li>
+    <li class="topa" id="top-color"><a href=""><span>音乐馆</span></a></li>
+    <li class="topa"><a href=""><span>我的音乐</span></a></li>
+    <li id="top-input"><div><input type="text"/></div></li>
+    <!--可以退出-->
+    <li id="top-5"><a href="">xxxxxx</a></li>
+    <li id="top-6"><a href="">退出</a></li>
+  </ul>
+</div>
+<div id="page-menu">
+  <ul>
+    <li><span><a href="">首页</a></span></li>
+    <li><span><a href="">歌手</a></span></li>
+    <li><span><a href="">专辑</a></span></li>
+    <li><span><a href="">歌单</a></span></li>
+    <li><span><a href="">排行榜</a></span></li></ul>
+</div>
+<div id="page-main">
+  <div class="new-spe">
+    <!--<span class="page-spe-name">歌单推荐</span>-->
+      <ul class="page-show-singer">
+        <div class="follow-singer"><img src="../files/1540976864022&&tablo.jpg" alt=""/>
+          <span>table</span><br/>
+          <span>111粉丝</span><br/>
+          <span><a href="">已关注</a></span>
+        </div>
+        </ul>
+  </div>
+  <br/>
+  <!--<div class="new-song">-->
+    <!--<span class="page-spe-name">专辑推荐</span>-->
+    <!--<ul class="page-every-spe">-->
+    <!--<li><div><a href=""><img src="../files/1540976695822&&tablo.jpg" alt=""/></a>-->
+      <!--<span><a href="">lala的歌唱。。</a></span><span>播放量1111</span></div>-->
+    <!--</li>-->
+    <!--<li><div><a href=""><img src="../files/1540976695822&&tablo.jpg" alt=""/></a>-->
+      <!--<span><a href="">lala的歌唱。。</a></span><span>播放量1111</span></div>-->
+    <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+</div>
+</body>
+</html>

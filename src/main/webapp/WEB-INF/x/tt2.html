@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+//      $("button").click(function(){
+//        alert("333");
+//      });
+//      var chk_value =[];
+//      $("#select").change(function(){
+//            $('input[name="test"]:checked').each(function(){
+//                chk_value.push($(this).val());
+//            });
+////              alert($(this).val());
+////            alert(chk_value);
+//          });
+
+      var checkID = [];
+      $("#select-type").change(function(){
+      $("input[name='test']:checked").each(function(i){//把所有被选中的复选框的值存入数组
+        checkID[i] =$(this).val();
+        });
+      });
+      var show_select = true;
+      $("#select-type").mouseleave(function(){
+        if(checkID.length != 0){
+          if(show_select){
+            for (var i  = 0;i < 3;i++) {
+              if (checkID[i] != null) {
+                $("#show-btn-type").append('<span style="width: 65px;height: 20px;background: #b8eeff;display: inline-block; margin-right: 5px;">' + checkID[i] + '</span>');
+                show_select = false;
+              }}
+          }
+        }
+//        if(checkID.length == 0){
+////          alert("true");
+////          为空
+//        }else{
+      });
+
+      $("#select-type").mouseenter(function(){
+        show_select = true;
+        $("#show-btn-type").children("span").remove();
+//        $(this).children().filter("span").remove();
+      });
+      if($(":checkbox").size()>=3){
+          $(":checkbox").removeAttr("checked");
+          $(":checkbox").attr("disabled","disabled");
+          $(":checkbox").removeAttr("disabled");
+      }
+      var num = 0;
+      $(":checkbox").each(function(){
+        $(this).click(function(){
+          if($(this)[0].checked) {
+//            alert($(this)[0]);
+            ++num;
+            if(num == 3) {
+              //alert("最多选择 三项 的上限已满, 其他选项将会变为不可选.");
+              $(":checkbox").each(function(){
+                if(!$(this)[0].checked) {
+                  $(this).attr("disabled", "disabled");
+                }
+              });
+            }
+          } else {
+            -- num;
+            if( num <= 2 ) {
+              $(":checkbox").each(function(){
+                if(!$(this)[0].checked) {
+                  $(this).removeAttr("disabled");
+                }
+              });
+            }
+          }
+        });
+      });
+
+      var selectFlag = true;
+      $("#btn1").click(function(){
+          if(selectFlag){
+            $("#select-type").css("display","block");
+            $(":checkbox").attr("checked",false);
+            $(":checkbox").removeAttr("disabled");
+            selectFlag = false;
+          }else{
+            $("#select-type").css("display","none")
+            selectFlag = true;
+          }
+      });
+
+    });
+
+  </script>
+  <style>
+    .types {width: 645px;}
+    #select-type {position:absolute;top:30px; left:40px; z-index:2;background: #ffffff; opacity: 0.8;display: none;}
+  </style>
+</head>
+<body>
+<div id="show-btn-type"><button id="btn1">hello</button></div>
+
+
+<div id="showdiv">
+  <div id="select" style="background: red;">
+  <input type="checkbox" name="test" class="check" value="上网"/>上网
+  <input type="checkbox" name="test" class="check"  value="旅游"/>旅游<br />
+  <input type="checkbox" name="test" class="check"  value="逛街"/>逛街<br />
+  <input type="checkbox" name="test" class="check"  value="游戏"/>游戏<br />
+  <input type="checkbox" name="test" class="check"  value="听歌"/>听歌<br />
+  <input type="checkbox" name="test" class="check"  value="购物"/>购物<br />
+</div>
+  <div id="div1" style="width: 30px; height: 50px; background: blue"></div>
+  </div>
+
+
+<div id="select-type">
+  <span>语种</span>
+  <div class="types">
+    <input type="checkbox" name="test" class="check" value="国语"/>国语
+    <input type="checkbox" name="test" class="check"  value="英语"/>英语
+    <input type="checkbox" name="test" class="check"  value="韩语"/>韩语
+    <input type="checkbox" name="test" class="check"  value="粤语"/>粤语
+    <input type="checkbox" name="test" class="check"  value="日语"/>日语
+    <input type="checkbox" name="test" class="check"  value="小语种"/>小语种
+    <input type="checkbox" name="test" class="check"  value="闽南语"/>闽南语
+    <input type="checkbox" name="test" class="check"  value="法语"/>法语
+    <input type="checkbox" name="test" class="check"  value="拉丁语"/>拉丁语
+  </div>
+  <span>流派</span>
+  <div class="types">
+    <input type="checkbox" name="test" class="check" value="流行"/>流行
+    <input type="checkbox" name="test" class="check"  value="轻音乐"/>轻音乐
+    <input type="checkbox" name="test" class="check"  value="摇滚"/>摇滚
+    <input type="checkbox" name="test" class="check"  value="民谣"/>民谣
+    <input type="checkbox" name="test" class="check"  value="R&amp;B"/>R&amp;B
+    <input type="checkbox" name="test" class="check"  value="嘻哈"/>嘻哈
+    <input type="checkbox" name="test" class="check"  value="电子"/>电子
+    <input type="checkbox" name="test" class="check"  value="古典"/>古典
+    <input type="checkbox" name="test" class="check"  value="乡村"/>乡村
+    <input type="checkbox" name="test" class="check"  value="蓝调"/>蓝调
+    <input type="checkbox" name="test" class="check"  value="爵士"/>爵士
+    <input type="checkbox" name="test" class="check"  value="拉丁"/>拉丁
+    <input type="checkbox" name="test" class="check"  value="中国传统"/>中国传统
+    <input type="checkbox" name="test" class="check"  value="世界音乐"/>世界音乐
+  </div>
+  <span>主题</span>
+  <div class="types">
+    <input type="checkbox" name="test" class="check" value="ACG"/>ACG
+    <input type="checkbox" name="test" class="check"  value="经典"/>经典
+    <input type="checkbox" name="test" class="check"  value="网络歌曲"/>网络歌曲
+    <input type="checkbox" name="test" class="check"  value="影视"/>影视
+    <input type="checkbox" name="test" class="check"  value="KTV热歌"/>KTV热歌
+    <input type="checkbox" name="test" class="check"  value="儿歌"/>儿歌
+    <input type="checkbox" name="test" class="check"  value="中国风"/>中国风
+    <input type="checkbox" name="test" class="check"  value="古风"/>古风
+    <input type="checkbox" name="test" class="check"  value="情歌"/>情歌
+    <input type="checkbox" name="test" class="check"  value="城市"/>城市
+    <input type="checkbox" name="test" class="check"  value="现场音乐"/>现场音乐
+    <input type="checkbox" name="test" class="check"  value="背景音乐"/>背景音乐
+    <input type="checkbox" name="test" class="check"  value="佛教音乐"/>佛教音乐
+    <input type="checkbox" name="test" class="check"  value="UP主"/>UP主
+    <input type="checkbox" name="test" class="check"  value="乐器"/>乐器
+    <input type="checkbox" name="test" class="check"  value="DJ"/>DJ
+  </div>
+  <span>心情</span>
+  <div class="types"><input type="checkbox" name="test" class="check" value="伤感"/>伤感
+    <input type="checkbox" name="test" class="check"  value="安静"/>安静
+    <input type="checkbox" name="test" class="check"  value="快乐"/>快乐
+    <input type="checkbox" name="test" class="check"  value="治愈"/>治愈
+    <input type="checkbox" name="test" class="check"  value="励志"/>励志
+    <input type="checkbox" name="test" class="check"  value="甜蜜"/>甜蜜
+    <input type="checkbox" name="test" class="check"  value="寂寞"/>寂寞
+    <input type="checkbox" name="test" class="check"  value="宣泄"/>宣泄
+    <input type="checkbox" name="test" class="check"  value="思念"/>思念</div>
+  <span>场景</span>
+  <div class="types">
+    <input type="checkbox" name="test" class="check" value="睡前"/>睡前
+    <input type="checkbox" name="test" class="check"  value="夜店"/>夜店
+    <input type="checkbox" name="test" class="check"  value="学习"/>学习
+    <input type="checkbox" name="test" class="check"  value="运动"/>运动
+    <input type="checkbox" name="test" class="check"  value="开车"/>开车
+    <input type="checkbox" name="test" class="check"  value="约会"/>约会
+    <input type="checkbox" name="test" class="check"  value="工作"/>工作
+    <input type="checkbox" name="test" class="check"  value="旅行"/>旅行
+    <input type="checkbox" name="test" class="check"  value="派对"/>派对
+    <input type="checkbox" name="test" class="check"  value="婚礼"/>婚礼
+    <input type="checkbox" name="test" class="check"  value="咖啡馆"/>咖啡馆
+  </div>
+</div>
+<span id="show" ></span>
+</body>
+</html>

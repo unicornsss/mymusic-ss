@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.MusicCommentMapper">
+    <resultMap id="ResultMusicComment" type="MusicComment">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="musicId" column="music_id"/>
+        <result property="giveGood" column="give_good"/>
+        <result property="depth" column="depth"/>
+        <result property="createTime" column="create_time"/>
+        <result property="content" column="content"/>
+
+        <association property="user" javaType="User">
+            <id property="id" column="u_id"/>
+            <result property="username" column="username"/>
+            <result property="userPic" column="user_pic"/>
+        </association>
+    </resultMap>
+
+    <insert id="insertComment" parameterType="MusicComment">
+        insert into music_comment (user_id,music_id,parent_id,depth,content,give_good,create_time) values
+        (#{userId},#{musicId},#{parentId},#{depth},#{content},#{giveGood},#{createTime});
+    </insert>
+
+    <select id="selectBySong" resultMap="ResultMusicComment" parameterType="integer">
+      select music_comment.id,user_id,music_id,parent_id,depth,content,give_good,music_comment.create_time,
+    user.id u_id,username,user_pic
+    from music_comment,user where user_id = user.id and music_id  = #{id};
+    </select>
+
+    <update id="updateZan" parameterType="integer">
+        update music_comment set give_good = give_good+1 where id = #{id};
+    </update>
+
+
+    <select id="selectById" resultMap="ResultMusicComment" parameterType="integer">
+      select music_comment.id,user_id,music_id,parent_id,depth,content,give_good,music_comment.create_time,
+      user.id u_id,username,user_pic
+      from music_comment,user where music_comment.id = #{id};
+    </select>
+
+
+</mapper>

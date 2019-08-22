@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.UserMapper">
+    <resultMap id="userResult" type="User">
+        <id property="id" column="id"/>
+        <result property="accountNumber" column="account_number"/>
+        <result property="createTime" column="create_time"/>
+        <result property="fans" column="fans"/>
+        <result property="likeList" column="like_list"/>
+        <result property="likeSongs" column="like_songs"/>
+        <result property="likeSpecial" column="like_special"/>
+        <result property="noticeSinger" column="notice_singer"/>
+        <result property="noticeUser" column="notice_user"/>
+        <result property="password" column="password"/>
+        <result property="username" column="username"/>
+        <result property="userPic" column="user_pic"/>
+    </resultMap>
+
+    <select id="selectOneUser" resultMap="userResult">
+      select id,account_number,create_time,fans,like_list,like_songs,like_special,notice_singer,notice_user,user_pic,password,username
+       from user where account_number = #{accountNumber} and password  = #{password};
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        insert into user (account_number,create_time,password,username,user_pic)
+        values ( #{accountNumber},#{createTime},#{password},#{username},#{userPic});
+    </insert>
+
+    <select id="selectOneUserById" resultMap="userResult">
+        select id,account_number,create_time,fans,like_list,like_songs,like_special,notice_singer,notice_user,user_pic,password,username
+       from user where id  = #{id};
+    </select>
+
+    <update id="updateNoticeSinger" parameterType="User">
+        update user set notice_singer = #{noticeSinger} where id = #{id};
+    </update>
+
+    <update id="updateLikeSong" parameterType="User">
+        update user set like_songs = #{likeSongs} where id = #{id};
+    </update>
+    <update id="updateLikeSpe" parameterType="User">
+        update user set like_special = #{likeSpecial} where id = #{id};
+    </update>
+    <select id="selectOneByAccount" resultMap="userResult" parameterType="string">
+        select id,account_number,create_time,fans,like_list,like_songs,like_special,notice_singer,notice_user,user_pic,password,username
+       from user where account_number  = #{account};
+    </select>
+</mapper>

@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  <title>Preload Ready</title>
+  <script type="text/javascript">
+    var audio = document.createElement("audio");
+    audio.src = "http://www.niumowang.org/wp-content/uploads/2012/03/beyond.ogg";
+    audio.src = "../music/1541173018280&&敢爱敢做-林子祥最爱接触.mp3";
+    audio.addEventListener("canplaythrough",
+      function() {
+        alert('音频文件已经准备好，随时待命');
+      },
+      false);
+    audio.addEventListener("timeupdate", showtime, true);
+    function showtime() {
+      document.getElementById("ltime").innerHTML = audio.duration;
+      document.getElementById("ctime").innerHTML = audio.currentTime;
+    }
+    function aPlay() {
+      audio.play();
+    }
+    function go() {
+      audio.currentTime += 10;
+      audio.play();
+    }
+    function back() {
+      audio.currentTime -= 10;
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+总时长：
+<div id="ltime">
+</div>
+<br/>
+当前播放：
+<div id="ctime">
+</div>
+<br/>
+<input type="button" onclick="aPlay();" value="播放音频">
+<input type="button" onclick="go();" value="快进10秒">
+<input type="button" onclick="back();" value="快退10秒">
+</body>
+</html>

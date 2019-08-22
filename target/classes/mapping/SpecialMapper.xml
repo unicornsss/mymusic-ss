@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.SpecialMapper">
+    <resultMap id="specialResult" type="Special">
+        <id property="id" column="id"/>
+        <result property="singerId" column="singer_id"/>
+        <result property="specialName" column="special_name"/>
+        <result property="specialStyle" column="special_style"/>
+        <result property="specialCompany" column="special_company"/>
+        <result property="specialLanguage" column="special_language"/>
+        <result property="createTime" column="create_time"/>
+        <result property="specialSummary" column="special_summary"/>
+        <result property="specialPicture" column="special_picture"/>
+        <result property="specialArea" column="special_area"/>
+        <result property="specialFlag" column="special_flag"/>
+        <association property="singer" javaType="Singer">
+            <id property="id" column="s_id"/>
+            <result property="singerName" column="singer_name"/>
+        </association>
+
+    </resultMap>
+    <insert id="insertSpecial" parameterType="Special">
+        insert into special (singer_id,special_name,special_style,special_company,special_language,create_time,special_summary,special_picture,special_area)
+        values (#{singerId},#{specialName},#{specialStyle},#{specialCompany},#{specialLanguage},#{createTime},#{specialSummary},#{specialPicture},#{specialArea});
+    </insert>
+    <select id="selectAllSpe" resultMap="specialResult">
+        select special.id,singer_id,special_name,special_style,special_company,special_language,create_time,special_summary,special_picture,special_area, singer.id s_id,singer_name
+        from special,singer where singer_id = singer.id and special_flag = 0;
+    </select>
+    <select id="selectOneSpe" resultMap="specialResult">
+        select special.id,singer_id,special_name,special_style,special_company,special_language,create_time,special_summary,special_picture,special_area, singer.id s_id,singer_name
+        from special,singer where singer_id = singer.id and special.id = #{id};
+    </select>
+    <select id="selectId" resultMap="specialResult" parameterType="Special">
+        select id,singer_id,special_name,special_style,special_company,special_language,create_time,special_summary,special_picture,special_area
+        from special where singer_id = #{singerId} and special_name = #{specialName};
+    </select>
+    <update id="updateBySinger" parameterType="integer">
+        update special set special_flag = 1 where singer_id = #{id};
+    </update>
+    <update id="updateByDelete" parameterType="integer">
+        update special set special_flag = 1 where id = #{id};
+    </update>
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(1) from special where special_flag = 0;
+    </select>
+    <select id="findSpeByPage" resultMap="specialResult" parameterType="java.util.Map">
+        select
+        special.id,singer_id,special_name,special_style,special_flag,special_company,special_language,create_time,special_summary,special_picture,special_area, singer.id s_id,singer_name
+        from  special,singer
+        where singer_id = singer.id and special_flag = 0
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+
+</mapper>

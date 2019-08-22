@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    function changepic3() {
+      var reads= new FileReader();
+      f=document.getElementById('uploadfile1').files[0];
+      reads.readAsDataURL(f);
+      reads.onload=function (e) {
+        document.getElementsByClassName('show-shoppic')[0].src=this.result;
+        document.getElementsByClassName('show-shoppic')[1].src=this.result;
+      };
+    }
+  </script>
+</head>
+<body>
+<td>
+  <img src="" alt="" class="show-shoppic" id="showpic"/>
+  <input type="file" class="" name="file1" id="uploadfile1" onchange="changepic3(this)"  accept="image/png, image/jpeg, image/jpg" required="required"/>
+</td></tr>
+<img src="" alt="" class="show-shoppic" id=""/>
+</body>
+</html>

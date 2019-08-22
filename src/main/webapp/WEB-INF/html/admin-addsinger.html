@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    a{text-decoration:none;color: #040404}
+    #all{width: 100%;}
+    #manager-top {background: #040404; width: 100%; height:50px;font-size: 20px;position:relative}
+    #manager-name{ text-align:center;position:absolute;color: #ffffff;left: 100px;top: 10px;}
+    #manager-out{ right: 200px;position:absolute;top: 10px;}
+    #manager-out a{color: #ffffff ;}
+    #list-menu{list-style:none;display:block }
+    #list-menu div{width:120px; height:60px;background: #bebdb9;text-align: center;}
+    #list-menu a{line-height:60px }
+    #show-list{background: #ffffff;width: 15%;position:absolute;float: left;}
+    #show-message{background: #c6c6c6;width:82.3%;float: right; padding-left: 30px;height: 550px;}
+    #add-singer{background: #838189;width: 80px; height: 30px;margin-top: 20px;margin-left: 2px;margin-bottom: 10px; text-align: center;}
+    .show-every-singer{display:inline-block;width: 160px;height: 230px;background: ghostwhite;padding-left: 10px;padding-top: 10px;padding-right: 10px;margin-left: 15px;margin-bottom: 20px;}
+    .show-pic {width: 160px;height: 160px; }
+    #add-singer-mes td{height:40px;  }
+    /*border:1px solid #9f9ea3;*/
+    .show-name { width: 100px;background: #818082; }
+    .show-details { border:1px solid #2b9bff; }
+    #singer-message {height: 100px; width: 300px;}
+    #showpic{ width: 150px; height:150px;}
+  </style>
+  <script>
+    function changepic3() {
+      var reads= new FileReader();
+      f=document.getElementById('uploadfile1').files[0];
+      reads.readAsDataURL(f);
+      reads.onload=function (e) {
+        document.getElementById('showpic').src=this.result;
+      };
+    }
+  </script>
+</head>
+<body>
+<div id="all">
+  <div id="manager-top"><div id="manager-name">管理者后台</div><div id="manager-out"><a href="">退出</a></div></div>
+  <div id="show-list">
+    <ul id="list-menu">
+      <li><div><a href="">歌手管理</a></div></li><br/>
+      <li><div><a href="">歌曲管理</a></div></li><br/>
+      <li><div><a href="">专辑管理</a></div></li><br/>
+      <li><div><a href="">歌曲管理</a></div></li><br/>
+      <li></li>
+    </ul>
+  </div>
+  <div id="show-message">
+    <div id="add-singer"><a href="">新增歌手</a></div>
+    <form action="<%=request.getContextPath()%>/admin/" method="post">
+      <table id = "add-singer-mes">
+        <tr><th class="show-name">资料</th>
+          <th class="show-username"></th></tr>
+        <tr><td >歌手名</td>
+          <td><input type="text" name="singerName" required="required"/></td></tr>
+        <tr><td >国籍</td>
+          <td><select id="singer-country" name="singerCountry" required="required">
+            <option value="x">请选择</option>
+              <option value="内地">内地</option><option value="港台">港台</option><option value="欧美">欧美</option><option value="日本">日本</option><option value="韩国">韩国</option><option value="其他">其他</option>
+          </select>
+          </td></tr>
+        <tr><td >男/女/组合</td>
+          <td><select id="singer-sex" name="singerSex" required="required">
+            <option value="x">请选择</option>
+            <option value="男">男</option><option value="女">女</option><option value="组合">组合</option>
+            </select>
+          </td></tr>
+        <tr><td >类别</td>
+          <td><select id="singer-style" name="singerStyle" required="required">
+            <option >请选择</option>
+            <option value="流行">流行</option><option value="嘻哈">嘻哈</option>
+            <option value="摇滚">摇滚</option><option value="电子">电子</option>
+            <option value="民谣">民谣</option> <option value="R&B">R&B</option>
+            <option value="民歌">民歌</option> <option value="轻音乐">轻音乐</option>
+            <option value="爵士">爵士</option> <option value="古典">古典</option>
+            <option value="乡村">乡村</option> <option value="蓝调">蓝调</option>
+          </select>
+          </td></tr>
+        <tr><td>描述信息</td>
+          <td><input type="text" name="singerName" id="singer-message" /></td></tr>
+        <tr><td>照片</td>
+          <td>
+            <img src="" alt="" class="show-shoppic" id="showpic"/>
+            <input type="file" class="" name="file1" id="uploadfile1" onchange="changepic3(this)"  accept="image/png, image/jpeg, image/jpg" required="required"/>
+          </td></tr>
+        <tr><td>操作</td><td><input type="submit" value="确认添加"/></td></tr>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+</html>

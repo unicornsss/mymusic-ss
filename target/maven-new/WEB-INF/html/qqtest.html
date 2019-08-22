@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>qq音乐</title>
+  <link rel="stylesheet" href="qq_music.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="public.css" />
+  <script type="text/javascript" src="qqmusic.js"></script>
+</head>
+<body>
+<!-- 顶部 -->
+<div id="header">
+  <div class="wrap">
+    <ul class="fr">
+      <li><span>您还未登录,</span><a href="#">马上登录</a><span>|</span></li>
+      <li><a href="#"><span id="vip"></span>绿钻</a><span>|</span></li>
+      <li><a href="#"><span id="sui"></span>付费音乐包</a><span>|</span></li>
+      <li><a href="#">全民K歌</a><span>|</span></li>
+      <li><a href="#">QQ演出</a><span>|</span></li>
+      <li><a href="#">QPlay</a><span>|</span></li>
+    </ul>
+  </div>
+</div>
+<!-- 中间主体区 -->
+<div id="center">
+  <!-- 导航栏以及搜索框 -->
+  <div id="top">
+    <div class="wrap">
+      <!-- logo -->
+      <div id="logo" class="fl"><img src="img/logo.png" height="54" width="182" alt="" /></div>
+      <!-- 导航栏 -->
+      <div id="nav" class="fl">
+        <ul class="nav">
+          <li>
+            <a href="#">音乐馆</a>
+            <div>
+              <a href="#">首页</a><span>|</span>
+              <a href="#">排行榜</a><span>|</span>
+              <a href="#">歌单广场</a><span>|</span>
+              <a href="#">电台</a><span>|</span>
+              <a href="#">歌手</a><span>|</span>
+              <a href="#">专辑</a>
+            </div>
+          </li>
+          <li>
+            <a href="">MV</a>
+            <div>
+              <a href="#">MV推荐</a><span>|</span>
+              <a href="#">MV排行榜</a><span>|</span>
+              <a href="#">MV库</a><span>|</span>
+              <a href="#">音乐现场</a><span>|</span>
+              <a href="#">MV专题</a><span>|</span>
+              <a href="#">巅峰榜盛典</a>
+            </div>
+          </li>
+          <li>
+            <a href="">我的音乐</a>
+            <div>
+              <a href="#">主题</a><span>|</span>
+              <a href="#">歌单</a><span>|</span>
+              <a href="#">MV收藏</a><span>|</span>
+              <a href="#">听众</a><span>|</span>
+              <a href="#">收听</a>
+            </div>
+          </li>
+          <li><a href="">下载客户端</a></li>
+        </ul>
+      </div>
+      <!-- 搜索 -->
+      <div id="search" class="fl">
+        <form action="">
+          <input type="text" class="text" value="找到好音乐" />
+          <input type="button" class="button" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- 内容区 -->
+  <div id="main" class="wrap">
+    <!-- 内容区左边区域 -->
+    <div id="side_left" class="fl">
+      <!-- 轮播图 -->
+      <div id="scroll_bar">
+        <img src="img/1.jpg" height="280" width="700" alt="" />
+        <p id="pre">&lt;</p>
+        <p id="next">&gt;</p>
+        <div id="circle_section">
+          <p class="circle"></p>
+          <p class="circle"></p>
+          <p class="circle"></p>
+          <p class="circle"></p>
+          <p class="circle"></p>
+          <p class="circle"></p>
+        </div>
+
+      </div>
+      <!-- 在线首发 -->
+      <div id="online_first">
+        <div class="section_top red_border">
+          <h1>在线首发</h1><a href="#">/更多</a>
+          <div class="fr">
+            <a href="#" class="pre"></a>
+            <a href="#" class="next"></a>
+          </div>
+        </div>
+        <ul>
+          <li class="mg_r_b"><a href="#"><img src="img/online_img/000HbmZA1fHnoD.jpg" alt="" /><h3>中国好声音第三...</h3><span>中国好歌曲</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r_b"><a href="#"><img src="img/online_img/000xeDc04TWB6K.jpg" alt="" /><h3>神秘世界</h3><span>萧煌奇</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r_b"><a href="#"><img src="img/online_img/000yVdgC09dcPS.jpg" alt="" /><h3>所谓如君</h3><span>魏如君</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r_b"><a href="#"><img src="img/online_img/000ZmnKf4fuO0O.jpg" alt="" /><h3>火锅英雄</h3><span>赵英俊</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_b"><a href="#"><img src="img/online_img/001BeN6N1Rte52.jpg" alt="" /><h3>At least for now</h3><span>At least for now</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r"><a href="#"><img src="img/online_img/002iLj0R01DDgx.jpg" alt="" /><h3>曾经在</h3><span>冲击力乐队</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r"><a href="#"><img src="img/online_img/002qntlg0OJhb5.jpg" alt="" /><h3>时光机</h3><span>张博林</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r"><a href="#"><img src="img/online_img/002UHYrG2vReCi.jpg" alt="" /><h3>谁是大歌神</h3><span>谁是大歌神</span></a><p></p><a href="#" class="btn"></a></li>
+          <li class="mg_r"><a href="#"><img src="img/online_img/004EvugT3C2fi7.jpg" alt="" /><h3>张磊的</h3><span>张磊</span></a><p></p><a href="#" class="btn"></a></li>
+          <li><a href="#"><img src="img/online_img/0012LUMJ3hkJon.jpg" alt="" /><h3>HIM</h3><span>history</span></a><p></p><a href="#" class="btn"></a></li>
+        </ul>
+      </div>
+      <div class="cl"></div>
+      <!-- MV首播 -->
+      <div id="music_list">
+        <div class="section_top orange_border">
+          <h1>MV首播</h1><a href="#">/更多</a>
+        </div>
+        <ul>
+          <li class="mv_mg_r mv_mg_b"><a href="#"><img src="img/mv_img/1460629184656234110.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_r mv_mg_b"><a href="#"><img src="img/mv_img/1460686132735178920.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_r mv_mg_b"><a href="#"><img src="img/mv_img/1460687134603178920.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_b"><a href="#"><img src="img/mv_img/1460687582500265320.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_r"><a href="#"><img src="img/mv_img/1460690350742326570.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_r"><a href="#"><img src="img/mv_img/1460706311470203030.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li class="mv_mg_r"><a href="#"><img src="img/mv_img/1460708976431326570.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+          <li><a href="#"><img src="img/mv_img/1460724418122326570.jpg" alt="" /></a><a href="#" class="mv_btn"></a><p><a href="#" class="mv_name">点亮万家灯火</a><span>-</span><a href="#" class="singer_name">纪敏佳</a></p><p>北漂经历与感悟，纪敏佳唱...</p><span>2016-04-18</span></li>
+        </ul>
+
+      </div>
+      <div class="cl"></div>
+      <!-- 最新推荐 -->
+      <div id="recommend">
+        <div id="new_recommend">
+          <div class="section_top green_border">
+            <h1 class="fl">最新推荐</h1>
+            <a href="#" class="broadcast"></a>
+            <a href="#" class="add"></a>
+            <div class="language fr">
+              <a href="#" class="select">华语</a><span>|</span>
+              <a href="#">韩语</a><span>|</span>
+              <a href="#">欧美</a>
+            </div>
+          </div>
+          <div class="cl"></div>
+          <div class="recommend_list">
+            <ul>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <!-- 最热推荐 -->
+        <div id="hot_recommend">
+          <div class="section_top green_border">
+            <h1 class="fl">最热推荐</h1>
+            <a href="#" class="broadcast"></a>
+            <a href="#" class="add"></a>
+          </div>
+          <div class="cl"></div>
+          <div class="recommend_list">
+            <ul>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+              <li><a class="recommend_song" href="#">迷雾（《魔宫魅影》电影主题曲）</a><span>-</span><a class="recommend_singer" href="#">A-lin</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl"></div>
+      </div>
+      <!-- MV精选 -->
+      <div id="choice">
+        <div class="section_top pink_border"><h1>精选集</h1></div>
+        <div class="choice_left fl">
+          <img src="img/choice_img/20151015175001.jpg" alt="" />
+          <a href="#">mv精选</a><br />
+          <span>音乐抚慰青春之痛，追忆那时的蜜语甜言。</span>
+        </div>
+        <div class="choice_right fl">
+          <ul>
+            <li class="choice_mg_r choice_mg_b"><img src="img/choice_img/20151015160855.jpg" alt="" /><a href="#">音乐时尚两不误</a></li>
+            <li class="choice_mg_r choice_mg_b"><img src="img/choice_img/20151015160924.jpg" alt="" /><a href="#">相恋跨越时空</a></li>
+            <li class="choice_mg_b"><img src="img/choice_img/20151015161017.jpg" alt="" /><a href="#">好的歌手会搞怪</a></li>
+            <li class="choice_mg_r"><img src="img/choice_img/20151015161055.jpg" alt="" /><a href="#">静享一曲中国风</a></li>
+            <li class="choice_mg_r"><img src="img/choice_img/20151015161125.jpg" alt="" /><a href="#">音乐和短裙最配</a></li>
+            <li><img src="img/choice_img/20151015161200.jpg" alt="" /><a href="#">一枝独秀更耀眼！</a></li>
+          </ul>
+          <div class="cl"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 内容区右边区域 -->
+    <div id="side_right" class="fl">
+      <div id="user_login">
+        <a href="#"><img src="img/side_right/bg_login.png" alt="" /></a>
+      </div>
+      <div id="ranking">
+        <!-- 巅峰榜 -->
+        <div id="ranking_title">
+          <h3 class="side_right_title fl">巅峰榜</h3>
+          <a href="#" class="broadcast"></a>
+          <a href="#" class="add"></a>
+        </div>
+        <div class="area">
+          <a class="select" href="#">流行指数</a><span>|</span>
+          <a href="#">内地</a><span>|</span>
+          <a href="#">港台</a><span>|</span>
+          <a href="#">欧美</a><span>|</span>
+          <a href="#">韩国</a>
+        </div>
+        <ul id="ranking_list">
+          <li class="ranking_one">
+            <span></span>
+            <img src="img/side_right/002Ibq0k31FYiu.jpg" alt="" />
+            <a class="ranking_one_song">只是没...</a><br />
+            <a class="ranking_one_singer">张靓颖/王...</a>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+          <li>
+            <span></span>
+            <h5><a href="#">有心无意</a></h5>
+            <p><a href="#">本兮</a></p>
+          </li>
+        </ul>
+        <ul class="rank_index">
+          <li class="rank_index_mg_r rank_index_mg_b"><a href="#">iTunes榜</a></li>
+          <li class="rank_index_mg_r rank_index_mg_b"><a href="#">美国公告牌</a></li>
+          <li class="rank_index_mg_b"><a href="#">英国UK榜</a></li>
+          <li class="rank_index_mg_r rank_index_mg_b"><a href="#">iTunes榜</a></li>
+          <li class="rank_index_mg_r rank_index_mg_b"><a href="#">美国公告牌</a></li>
+          <li class="rank_index_mg_b"><a href="#">英国UK榜</a></li>
+          <li class="rank_index_mg_r"><a href="#">iTunes榜</a></li>
+          <li class="rank_index_mg_r"><a href="#">美国公告牌</a></li>
+          <li><a href="#">英国UK榜</a></li>
+          <!-- <li class="cl"></li> -->
+        </ul>
+      </div>
+      <!-- 热门歌手 -->
+      <div id="hot_singer">
+        <div class="hot_singer_title">
+          <h3 class="side_right_title">热门歌手</h3>
+          <a href="#">/更多</a>
+        </div>
+        <ul class="singer_list">
+          <li class="singer_list_mg_r singer_list_mg_b"><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+          <li class="singer_list_mg_r singer_list_mg_b"><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+          <li class="singer_list_mg_b"><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+          <li class="singer_list_mg_r"><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+          <li class="singer_list_mg_r"><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+          <li><img src="img/side_right/0025NhlN2yWrP4.jpg" alt="" /><a href="#">周杰伦</a></li>
+        </ul>
+        <ul class="singer_area">
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_b"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r"><a href="#">华语男歌手</a></li>
+          <li class="singer_area_mg_r"><a href="#">华语男歌手</a></li>
+          <li><a href="#">华语男歌手</a></li>
+        </ul>
+      </div>
+      <!-- 精彩活动 -->
+      <div id="activity">
+        <div>
+          <h3 class="side_right_title">精彩活动</h3>
+        </div>
+        <div class="act_content">
+          <div class="rank_index_mg_b">
+            <a href="#"><img src="img/side_right/20160401165031.jpg" alt="" /></a>
+            <p><a href="#">[精彩活动] 长江国际音乐节</a></p>
+          </div>
+          <div>
+            <a href=""><img src="img/side_right/20160401165120.jpg" alt="" /></a>
+            <p><a href="#">[精彩活动] 光年</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cl"></div>
+<!-- 低栏 -->
+<div id="footer">
+  <div class="wrap">
+    <div class="follow_on">
+      <dl class="soft_download fl">
+        <dt>软件下载</dt>
+        <dd>
+          <a href="#">PC版</a>
+          <a href="#">ipone客户端</a>
+          <a href="#">ipad客户端</a>
+        </dd>
+        <dd>
+          <a href="#">MAC版</a>
+          <a href="#">Android客户端</a>
+          <a href="#">Android Pad客户端</a>
+        </dd>
+        <dd>
+          <a href="#">Windows Phone版</a>
+        </dd>
+      </dl>
+      <dl class="fl">
+        <dt>特色产品</dt>
+        <dd><a href="#">车载互联</a></dd>
+        <dd><a href="#">QPlay</a></dd>
+        <dd><a href="#">qq音乐原创音乐平台</a></dd>
+      </dl>
+      <dl class="friend_link fl">
+        <dt>友情链接</dt>
+        <dd>
+          <a href="#">腾讯视频</a>
+          <a href="#">手机QQ空间</a>
+          <a href="#">最新版QQ</a>
+          <a href="#">腾讯课堂</a>
+          <a href="#">腾讯社交广告</a>
+        </dd>
+        <dd>
+          <a href="#">电脑管家</a>
+          <a href="#">QQ浏览器</a>
+          <a href="#">画报</a>
+          <a href="#">腾讯微云</a>
+          <a href="#">黄钻活动</a>
+          <a href="#">星钻</a>
+        </dd>
+        <dd>
+          <a href="#">企鹅FM</a>
+          <a href="#">腾讯云</a>
+          <a href="#">腾讯云论坛</a>
+          <a href="#">兴趣部落</a>
+          <a href="#">腾讯云搜</a>
+        </dd>
+        <dd>
+          <a href="#">智能电视网</a><a href="#">当贝市场</a>
+        </dd>
+      </dl>
+    </div>
+    <div class="cl"></div>
+    <p class="footer_menu">
+      <a href="#">关于腾讯</a>|
+      <a href="#">About Tencent</a>|
+      <a href="#">服务条款</a>|
+      <a href="#">用户服务协议</a>|
+      <a href="#">广告服务</a>|
+      <a href="#">腾讯招聘</a>|
+      <a href="#">客服中心</a>|
+      <a href="#">网站导航</a>
+    </p>
+    <p class="copyrighten">
+      <span>Copyright © 1998 - 2016 Tencent.</span><a href="#">All Rights Reserved.</a>
+    </p>
+    <p class="copyrightzh">
+      <span>腾讯公司</span> <a href="#">版权所有 腾讯网络文化经营许可证</a>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

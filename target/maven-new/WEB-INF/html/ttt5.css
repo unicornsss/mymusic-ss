@@ -1,0 +1,71 @@
+html,body{height: 100%;margin: 0;padding: 0;}
+ul{list-style: none;}
+a{
+    text-decoration:none}
+#show-top{width: 100%}
+#top-ul{
+    width:100%;
+    height:100px;
+    list-style: none;
+    margin:0;
+    padding:0;
+    text-align: center;
+    line-height: 100px;
+}
+#top-ul li{
+    height: 100px;
+    background: #e8e8e8;
+    float: left;/*该处换为display:inline-block;同样效果*/
+}
+#top-ul1 { width: 25%;text-align: center;line-height: 130px; }
+#top-color a{background: #2cff9d;}
+#top-input {width: 23% ;text-align:center;line-height:100px;}
+.topa a{  width:200px;height: 100px;font-size: 18px;line-height:100px;
+    display: inline-block;text-align:center;}
+#top-5{ text-align:center;line-height:100px;width: 160px;}
+#top-6{width: 10%;}
+#top-6 a{width: 100px;background: #808080;height: 100px;line-height:100px; display: inline-block;text-align:center;}
+#top-img{text-align:center;line-height:100px;width: 80px;height:80px;background: #000000}
+.show-img {background: url("../other/6c3e6b13gy1fv2jtx305rj20hs0budg0.jpg");width: 100%;height: 300px;padding-top: 10px;text-align: center;color: #ffffff}
+#show-img-self {width: 80px;height: 80px;}
+.show-fan li{float: left;}
+.show-fan {margin-left: 44%;}
+.main{margin-top: -50px;}
+.menu { padding-bottom: 30px;}
+.menu a{color: #ffffff}
+.menu li{float: left;width: 130px;}
+.like {}
+.like li{float: left;width: 100px;}
+.like a{color: #000000}
+.main {margin-left: 50px;}
+#song-menu li{float: left;background: darkgray;height: 80px;line-height: 80px;}
+#header-song {width:600px; }
+#header-singer{width: 200px;}
+#header-spe{width: 200px;}
+#header-time{width: 100px;}
+.every-song {height: 60px;line-height: 60px;margin-bottom: 5px;}
+.every-song a {color: #000000}
+.list-song{float: left}
+/*.every-song span{line-height: 70px;}*/
+.btn-play {float: right;}
+.btn-play span{display:inline-block;width: 50px;height: 40px;line-height: 40px;background: #808080;margin-right: 5px;}
+.song-name{ float: left;}
+.every-header{float: left;width: 600px;background: #c6c6c6;}
+.every-singer, .every-spe{float: left;background: #d1d1d1;line-height: 60px;display:inline-block;height: 60px;margin-left: 5px;width: 195px}
+.follow-singer img{width: 150px; height: 150px;border-radius:50%;}
+.follow-singer{float: left;width: 170px;text-align:center;;background: #d1d1d1;margin:10px 10px 30px 0px;  }
+#show-song{margin-left: 10px;}
+.follow-singer span{line-height: 30px;}
+#page-menu{text-align: center;line-height: 60px;width: 100%;height: 80px;position: relative;}
+#page-menu ul{margin:0 auto;width: 520px;}
+#page-menu li{float: left;background: #f9fffb;border: 1px dashed #b8b6be}
+#page-main{background: #d1d1d1;overflow:auto;padding-left: 35px;}
+.new-spe{height: 380px}
+#page-menu span{width: 100px;height: 60px;display: inline-block}
+.page-spe-name {width:180px;height: 60px;background: #d1d1d1;font-size: 26px;line-height: 60px;letter-spacing:8px;
+    margin-left: 595px;display: inline-block;}
+.page-every-spe img{width: 200px;}
+.page-every-spe span{width: 180px;height: 30px;display: inline-block;}
+.page-every-spe li {float: left;width: 220px;height: 250px;margin-left: 10px;margin-bottom: 10px; }
+.new-song{height: 800px;}
+

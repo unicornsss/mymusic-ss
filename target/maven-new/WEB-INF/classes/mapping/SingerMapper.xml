@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.SingerMapper">
+    <resultMap id="singerResult" type="Singer">
+        <id property="id" column="id"/>
+        <result property="singerName" column="singer_name"/>
+        <result property="singerSummary" column="singer_summary"/>
+        <result property="singerCountry" column="singer_country"/>
+        <result property="singerSex" column="singer_sex"/>
+        <result property="singerStyle" column="singer_style"/>
+        <result property="singerPicture" column="singer_picture"/>
+        <result property="singerNotice" column="singer_notice"/>
+        <result property="singerFlag" column="singer_flag"/>
+
+
+    </resultMap>
+    <insert id="insertSinger" parameterType="Singer">
+        insert into singer(singer_name,singer_summary,singer_country,singer_sex,singer_style,singer_picture)
+         values(#{singerName},#{singerSummary},#{singerCountry},#{singerSex},#{singerStyle},#{singerPicture});
+    </insert>
+    <select id="selectAll" resultMap="singerResult">
+        select id,singer_name,singer_summary,singer_country,singer_sex,singer_style,singer_picture,singer_notice from singer where singer_flag = 0;
+    </select>
+    <select id="selectOne" resultMap="singerResult" parameterType="integer">
+        select id,singer_name,singer_summary,singer_country,singer_sex,singer_style,singer_picture,singer_notice from singer where id = #{id};
+    </select>
+    <update id="updateSinger" parameterType="Singer">
+        update singer
+        <set>
+         singer_summary = #{singerSummary},
+            <if test="singerPicture != null" >
+                singer_picture = #{singerPicture,jdbcType=VARCHAR},
+            </if>
+        singer_name = #{singerName},
+        singer_style = #{singerStyle}
+        </set>
+        where id = #{id}
+    </update>
+    <update id="updateOne" parameterType="integer">
+        update singer set singer_flag = 1 where id = #{id};
+    </update>
+    <update id="updateNoticeAdd" parameterType="integer">
+        update singer set singer_notice = singer_notice + 1 where id = #{id};
+    </update>
+
+    <update id="updateNoticeSub" parameterType="integer">
+        update singer set singer_notice = singer_notice - 1 where id = #{id};
+    </update>
+
+    <select id="selectSingerCount" resultType="java.lang.Integer">
+        select count(1) from singer where singer_flag = 0;
+    </select>
+    <select id="findSingerByPage" resultMap="singerResult" parameterType="java.util.Map">
+        select
+        id,singer_name,singer_summary,singer_country,singer_sex,singer_style,singer_picture,singer_notice
+        from  singer
+        where singer_flag = 0
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+    <select id="selectBysingerKey" resultMap="singerResult" parameterType="string">
+        select
+        id,singer_name,singer_summary,singer_country,singer_sex,singer_style,singer_picture,singer_notice
+        from  singer
+        where singer_flag = 0 and
+        singer_name like CONCAT('%', #{keys}, '%');
+    </select>
+
+</mapper>

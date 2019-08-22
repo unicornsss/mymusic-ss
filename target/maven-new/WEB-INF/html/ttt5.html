@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="ttt5.css"/>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+      var btnFlag = 0;
+      $(".every-song").mouseenter(function(){
+        if(btnFlag ==0){
+          showbtn();
+        }
+      });
+      $(".every-song").mouseleave(function(){
+        $(".song-name").next().remove();
+        btnFlag = 0;
+      });
+      function showbtn(){
+        $(".every-header").append('<div class="btn-play"><a href=""><span>播放</span></a><a href=""><span>+</span></a></div>');
+        btnFlag = 1;
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="show-top">
+  <ul id="top-ul">
+    <li id="top-ul1"><img src="../other/logo.png" alt=""/></li>
+    <li class="topa"><a href=""><span>音乐馆</span></a></li>
+    <li class="topa"  id="top-color"><a href=""><span>我的音乐</span></a></li>
+    <li id="top-input"><div><input type="text"/></div></li>
+    <!--可以退出-->
+    <li id="top-5"><a href="">xxxxxx</a></li>
+    <li id="top-6"><a href="">退出</a></li>
+  </ul>
+</div>
+<div class="show-img">
+  <div >
+    <img src="../files/1540976695822&&tablo.jpg" alt="" id="show-img-self"/>
+  </div>
+  <h1>xxxxx</h1>
+  <ul class="show-fan">
+    <li>关注1|</li>
+    <li>|粉丝1</li>
+  </ul>
+</div>
+<div class="main">
+  <div id="show-menu">
+    <ul class="menu">
+      <li><a href="">我喜欢</a></li>
+      <li><a href="">我创建的歌单</a></li>
+      <li><a href="">关注</a></li>
+      <li><a href="">粉丝</a></li>
+    </ul>
+    <ul class="like">
+      <li><a href="">歌曲</a></li>
+      <li><a href="">歌单</a></li>
+      <li><a href="">专辑</a></li>
+    </ul>
+  </div><br/>
+  <div id="show-song">
+      <ul id="song-menu">
+        <li id="header-song">歌曲</li>
+        <li id="header-singer">歌手</li>
+        <li id="header-spe">专辑</li>
+        <li id="header-time">时长</li>
+      </ul>
+      <ul class="list-song">
+        <li>
+          <div class="every-song">
+          <div class="every-header">
+          <a href="" class="song-name"><span>sing for you</span></a>
+          </div>
+          <span class="every-singer"><a href="">EXO</a></span><span class="every-spe"><a href="">专辑</a></span>
+        </div></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    div{
+      width:50px;
+      height:50px;
+      margin-left:10px;
+      float: left;
+      border:1px solid pink;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.onclick = function(e){
+        var target = e.target|| e.srcElement;
+        if(target.className =="singerPic")
+        alert("yes");
+//        alert(target.id)
+        function changepic3() {
+          var reads= new FileReader();
+          f=document.getElementById('uploadfile1').files[0];
+          reads.readAsDataURL(f);
+          reads.onload=function (e) {
+            document.getElementById('showpic').src=this.result;
+          };
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+<div id="div1">
+  this is div 1
+
+  <img src="" alt="" class="show-shoppic" id="showpic"/>
+  <input type="file" class="singerPic" name="file1" id="uploadfile1" onchange="changepic3(this)"  accept="image/png, image/jpeg, image/jpg" required="required"/>
+</div>
+<div id="div2">
+  div2
+</div>
+<div id="div3">
+  this is div 3
+</div>
+<div id="div4">
+  this is div 4
+</div>
+<div id="div5">
+  this is div 5
+</div>
+</body>
+</html>

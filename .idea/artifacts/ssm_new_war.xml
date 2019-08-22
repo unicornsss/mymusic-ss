@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ssm-new:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="maven-new.war">
+      <element id="artifact" artifact-name="ssm-new:war exploded" />
+    </root>
+  </artifact>
+</component>

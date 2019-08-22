@@ -1,0 +1,30 @@
+/*.mod_top_nav{*/
+    /*width:700px;*/
+    /*height:50px;*/
+    /*list-style: none;*/
+    /*margin:0;*/
+    /*padding:0;*/
+/*}*/
+/*.mod_top_nav{*/
+    /*width:700px;*/
+    /*height:50px;*/
+    /*list-style: none;*/
+    /*margin:0;*/
+    /*padding:0;*/
+/*}*/
+/*.mod_top_nav li{*/
+    /*width:70px;*/
+    /*margin:0 10px;*/
+    /*float: left;*//*该处换为display:inline-block;同样效果*/
+
+/*}*/
+
+/*.mod_top_nav li a{*/
+    /*width:70px;*/
+    /*height:50px;*/
+    /*padding:0 20px;*/
+    /*font-size: 12px;*/
+    /*line-height:50px;*/
+    /*background: red;*/
+    /*display: inline-block;*/
+/*}*/

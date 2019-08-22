@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script>
+    $(function(){
+      $(".btn-list").change(function(){
+        alert($(this).children("option:selected").val());
+        alert($(this).parent(".hhh").attr("id"));
+      });
+    });
+  </script>
+</head>
+<body>
+<div id="www" class="hhh">
+  <select class="btn-list" >
+    <option value="1" >添加到1</option>
+    <option value="2" >添加到2</option>
+    <option value="3" >添加到3</option>
+    <option value="4" >添加到4</option>
+    <option value="5" >添加到5</option>
+    <option value="6" >添加到6</option>
+  </select>
+</div>
+<div id="qqq" class="hhh"><select class="btn-list" >
+  <option value="11" >添加到12</option>
+  <option value="22" >添加到22</option>
+  <option value="33" >添加到32</option>
+  <option value="44" >添加到42</option>
+  <option value="55" >添加到52</option>
+  <option value="66" >添加到62</option>
+</select></div>
+
+
+
+</body>
+</html>

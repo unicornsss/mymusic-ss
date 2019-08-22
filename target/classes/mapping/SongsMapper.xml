@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.music.mapper.SongsMapper">
+    <resultMap id="songResult" type="Songs">
+        <id property="id" column="id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="specialId" column="special_id"/>
+        <result property="singerId" column="singer_id"/>
+        <result property="songLanguage" column="song_language"/>
+        <result property="songName" column="song_name"/>
+        <result property="songPicture" column="song_picture"/>
+        <result property="songPlayNum" column="song_play_num"/>
+        <result property="songStyle" column="song_style"/>
+        <result property="songText" column="song_text"/>
+        <result property="songFile" column="song_file"/>
+        <result property="songFlag" column="song_flag"/>
+
+        <association property="singer" javaType="Singer">
+            <id property="id" column="s_id"/>
+            <result property="singerName" column="singer_name"/>
+        </association>
+        <association property="special" javaType="Special">
+            <id property="id" column="spe_id"/>
+            <result property="specialName" column="special_name"/>
+        </association>
+    </resultMap>
+    <insert id="insertSong" parameterType="Songs">
+        insert into songs (create_time,special_id,singer_id,song_language,song_name ,song_picture,song_style,song_text,song_file) values
+        (#{createTime},#{specialId},#{singerId},#{songLanguage},#{songName},#{songPicture},#{songStyle},#{songText},#{songFile});
+    </insert>
+    <select id="selectBySpe" resultMap="songResult" parameterType="integer">
+        select id,create_time,special_id,singer_id,song_language,song_name ,song_picture,song_style,song_play_num,song_text,song_file
+         from songs where special_id = #{id};
+    </select>
+    <select id="selectById" resultMap="songResult" parameterType="integer">
+        select
+        songs.id,song_name ,special.create_time,special_id,songs.singer_id,
+        song_language,song_picture,song_style,song_play_num,song_text,song_file,
+        singer.id s_id,singer_name,
+        special.id spe_id,special_name
+        from songs,singer,special
+        where songs.singer_id = singer.id and song_flag = 0 and special_id = special.id and songs.id = #{id};
+    </select>
+    <update id="updateLrc" parameterType="Songs" >
+        update songs set song_text = #{songText} where id = #{id};
+    </update>
+    <select id="selectAllSong" resultMap="songResult">
+        select
+        songs.id,song_name ,special.create_time,special_id,songs.singer_id,song_language,song_picture,song_style,song_play_num,song_text,song_file,
+        singer.id s_id,singer_name,
+        special.id spe_id,special_name
+        from songs,singer,special
+        where songs.singer_id = singer.id and song_flag = 0 and special_id = special.id;
+    </select>
+
+    <update id="updateBySinger" parameterType="integer">
+        update songs set song_flag = 1 where singer_id = #{id};
+    </update>
+    <update id="updateLikeDe" parameterType="integer">
+        update songs set song_flag = 1 where id = #{id};
+    </update>
+    <update id="updateBySpe" parameterType="integer">
+        update songs set song_flag = 1 where special_id = #{id};
+    </update>
+    <select id="selectSongCount" resultType="java.lang.Integer">
+      select count(1) from songs where song_flag = 0;
+    </select>
+    <update id="updateSongPlayNum" parameterType="integer">
+        update songs set song_play_num = song_play_num + 1 where special_id = #{id};
+    </update>
+    <select id="findSongByPage" resultMap="songResult" parameterType="java.util.Map">
+        select
+        songs.id,create_time,special_id,singer_id,song_language,song_name ,song_picture,song_style,song_play_num,song_text,song_file,singer.id s_id,singer_name
+        from  songs,singer
+        where singer_id = singer.id and song_flag = 0
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+    <select id="selectBySinger" resultMap="songResult" parameterType="integer">
+        select
+        songs.id,song_name ,special.create_time,special_id,songs.singer_id,song_language,song_picture,song_style,song_play_num,song_text,song_file,
+        singer.id s_id,singer_name,
+        special.id spe_id,special_name
+        from songs,singer,special
+        where songs.singer_id = singer.id and song_flag = 0 and special_id = special.id and songs.singer_id = #{id};
+    </select>
+    <select id="selectByKey" resultMap="songResult" parameterType="string">
+        select
+        songs.id,create_time,special_id,singer_id,song_language,song_name ,song_picture,song_style,song_play_num,song_text,song_file,singer.id s_id,singer_name
+        from songs,singer
+        where songs.singer_id = singer.id and song_flag = 0 and
+        (song_name like CONCAT('%', #{key}, '%')
+        or singer_name like CONCAT('%', #{key},'%'));
+    </select>
+</mapper>
